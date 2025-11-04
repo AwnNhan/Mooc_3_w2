@@ -1,67 +1,107 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Image Previewer</title>
+<head>
+    <meta charset="UTF-8">
+    <title>Image Preview Gallery</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-      }
-      #image {
-        width: 400px;
-        height: 300px;
-        margin: 20px auto;
-        border: 2px solid #333;
-        background-color: #f0f0f0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2em;
-        color: #666;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        transition: background-image 0.5s;
-      }
-      .preview {
-        width: 100px;
-        height: 100px;
-        margin: 10px;
-        cursor: pointer;
-        border: 1px solid #ccc;
-      }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #image {
+            width: 400px;
+            height: 300px;
+            margin: 20px auto;
+            border: 2px solid #333;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            color: #666;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: background-image 0.5s;
+        }
+        .preview {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+        }
+        .preview:focus {
+            outline: 3px solid blue;
+            border-color: blue;
+        }
     </style>
-  </head>
-  <body>
-    <h1>Hover over an image to see the preview!</h1>
+</head>
+<body onload="addTabFocus()">
 
-    <div id="image">Hover over an image below to display here.</div>
+    <h1>Hover or Tab to an image to see the preview!</h1>
+
+    <div id="image">
+        Hover over an image below to display here.
+    </div>
 
     <div id="image-gallery">
-      <img
-        class="preview"
-        alt="Mô tả bức ảnh số 1"
-        src="https://via.placeholder.com/150/FF5733/FFFFFF?text=Pic+1"
-        onmouseover="upDate(event)"
-        onmouseout="unDo()"
-      />
-      <img
-        class="preview"
-        alt="Mô tả bức ảnh số 2"
-        src="https://via.placeholder.com/150/33FF57/FFFFFF?text=Pic+2"
-        onmouseover="upDate(event)"
-        onmouseout="unDo()"
-      />
-      <img
-        class="preview"
-        alt="Mô tả bức ảnh số 3"
-        src="https://via.placeholder.com/150/5733FF/FFFFFF?text=Pic+3"
-        onmouseover="upDate(event)"
-        onmouseout="unDo()"
-      />
+        <img 
+            class="preview" 
+            alt="Mô tả bức ảnh số 1" 
+            src="https://via.placeholder.com/150/FF5733/FFFFFF?text=Pic+1"
+            onmouseover="upDate(event)" 
+            onmouseout="unDo()"
+            onfocus="upDate(event)" 
+            onblur="unDo()"
+        >
+        <img 
+            class="preview" 
+            alt="Mô tả bức ảnh số 2" 
+            src="https://via.placeholder.com/150/33FF57/FFFFFF?text=Pic+2"
+            onmouseover="upDate(event)" 
+            onmouseout="unDo()"
+            onfocus="upDate(event)" 
+            onblur="unDo()"
+        >
+        <img 
+            class="preview" 
+            alt="Mô tả bức ảnh số 3" 
+            src="https://via.placeholder.com/150/5733FF/FFFFFF?text=Pic+3"
+            onmouseover="upDate(event)" 
+            onmouseout="unDo()"
+            onfocus="upDate(event)" 
+            onblur="unDo()"
+        >
+        <img 
+            class="preview" 
+            alt="Mô tả bức ảnh số 4" 
+            src="https://via.placeholder.com/150/FF33A1/FFFFFF?text=Pic+4"
+            onmouseover="upDate(event)" 
+            onmouseout="unDo()"
+            onfocus="upDate(event)" 
+            onblur="unDo()"
+        >
+        <img 
+            class="preview" 
+            alt="Mô tả bức ảnh số 5" 
+            src="https://via.placeholder.com/150/33FFF6/FFFFFF?text=Pic+5"
+            onmouseover="upDate(event)" 
+            onmouseout="unDo()"
+            onfocus="upDate(event)" 
+            onblur="unDo()"
+        >
+        <img 
+            class="preview" 
+            alt="Mô tả bức ảnh số 6" 
+            src="https://via.placeholder.com/150/F3FF33/FFFFFF?text=Pic+6"
+            onmouseover="upDate(event)" 
+            onmouseout="unDo()"
+            onfocus="upDate(event)" 
+            onblur="unDo()"
+        >
     </div>
 
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
